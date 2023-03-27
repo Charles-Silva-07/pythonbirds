@@ -12,3 +12,14 @@ if __name__ == '__main__':
     print(p.comprimentar())
     print(p.nome)
     p.nome = 'Silva'
+
+
+class Homem(Pessoa):
+    def comprimentar(self, nome = 'charles'):
+        comprimentar_da_classe = super().comprimentar()
+        return f'{comprimentar_da_classe} apertar a mão'
+
+
+h = Homem()
+print(h.nome)
+print(h.comprimentar())
